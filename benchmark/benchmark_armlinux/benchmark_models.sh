@@ -108,7 +108,7 @@ function bench_armlinux() {
 
         for benchmark_model in ${benchmark_model_list[*]}
         do
-            cd ${WORK_DIR}; LD_LIBRARY_PATH=. ./build/test/TNNTest -wc ${WARM_UP_COUNT} -ic ${LOOP_COUNT} -dt ${device} -mt ${MODEL_TYPE} -mp ${BENCHMARK_MODEL_DIR}/${benchmark_model}  >> $OUTPUT_LOG_FILE
+            cd ${WORK_DIR}; LD_LIBRARY_PATH=. sudo ./build/test/TNNTest -wc ${WARM_UP_COUNT} -ic ${LOOP_COUNT} -dt ${device} -mt ${MODEL_TYPE} -mp ${BENCHMARK_MODEL_DIR}/${benchmark_model}  >> $OUTPUT_LOG_FILE
         done
     fi
 
@@ -122,7 +122,7 @@ function bench_armlinux() {
         echo "benchmark device: ${device} " >> $WORK_DIR/$OUTPUT_LOG_FILE
         for benchmark_model in ${benchmark_model_list[*]}
         do
-            cd ${WORK_DIR}; LD_LIBRARY_PATH=. ./build/test/TNNTest -wc ${WARM_UP_COUNT} -ic ${LOOP_COUNT} -dt ${device} -mt ${MODEL_TYPE} -mp ${BENCHMARK_MODEL_DIR}/${benchmark_model}  >> $OUTPUT_LOG_FILE
+            cd ${WORK_DIR}; LD_LIBRARY_PATH=. sudo ./build/test/TNNTest -wc ${WARM_UP_COUNT} -ic ${LOOP_COUNT} -dt ${device} -mt ${MODEL_TYPE} -mp ${BENCHMARK_MODEL_DIR}/${benchmark_model}  >> $OUTPUT_LOG_FILE
         done
     fi
 

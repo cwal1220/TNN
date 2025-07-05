@@ -3,7 +3,7 @@
 SHARED_LIB="ON"
 ARM="ON"
 OPENMP="ON"
-OPENCL="OFF"
+OPENCL="ON"
 RKNPU="OFF"
 CC=aarch64-linux-gnu-gcc
 CXX=aarch64-linux-gnu-g++

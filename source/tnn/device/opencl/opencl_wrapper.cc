@@ -241,9 +241,9 @@ bool OpenCLSymbols::LoadLibraryFromPath(const std::string &library_path) {
     TNN_LOAD_FUNCTION_PTR(clEnqueueCopyBufferToImage);
     TNN_LOAD_FUNCTION_PTR(clEnqueueCopyImageToBuffer);
 #ifndef WIN32
-    TNN_LOAD_FUNCTION_PTR(clCreateFromEGLImageKHR);
-    TNN_LOAD_FUNCTION_PTR(clEnqueueAcquireEGLObjectsKHR);
-    TNN_LOAD_FUNCTION_PTR(clEnqueueReleaseEGLObjectsKHR);
+    // TNN_LOAD_FUNCTION_PTR(clCreateFromEGLImageKHR);
+    // TNN_LOAD_FUNCTION_PTR(clEnqueueAcquireEGLObjectsKHR);
+    // TNN_LOAD_FUNCTION_PTR(clEnqueueReleaseEGLObjectsKHR);
 #else
     // TNN_TRY_LOAD_FUNCTION_PTR(clCreateFromEGLImageKHR);
     // TNN_TRY_LOAD_FUNCTION_PTR(clEnqueueAcquireEGLObjectsKHR);
@@ -254,9 +254,9 @@ bool OpenCLSymbols::LoadLibraryFromPath(const std::string &library_path) {
     TNN_LOAD_FUNCTION_PTR(clRetainDevice);
     TNN_LOAD_FUNCTION_PTR(clReleaseDevice);
     TNN_LOAD_FUNCTION_PTR(clCreateImage);
-    TNN_TRY_LOAD_FUNCTION_PTR(clEnqueueAcquireGLObjects);
-    TNN_TRY_LOAD_FUNCTION_PTR(clEnqueueReleaseGLObjects);
-    TNN_TRY_LOAD_FUNCTION_PTR(clCreateFromGLTexture);
+    // TNN_TRY_LOAD_FUNCTION_PTR(clEnqueueAcquireGLObjects);
+    // TNN_TRY_LOAD_FUNCTION_PTR(clEnqueueReleaseGLObjects);
+    // TNN_TRY_LOAD_FUNCTION_PTR(clCreateFromGLTexture);
 #endif
 #if CL_HPP_TARGET_OPENCL_VERSION >= 200
     TNN_LOAD_FUNCTION_PTR(clGetKernelSubGroupInfoKHR);
